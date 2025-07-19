@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucretia Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      font-size: 2em;
+      color: gold;
+    }
+    .lang-switch {
+      margin-top: 10px;
+    }
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #333;
+      border: 1px solid gold;
+      color: gold;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+    }
+    .gallery img {
+      margin: 10px;
+      max-width: 300px;
+      border: 2px solid gold;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll(".lang").forEach(el => el.style.display = "none");
+      document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+    }
+  </script>
+</head>
+<body onload="switchLang('en')">
+  <header>LUCRETIA</header>
+  <div class="lang-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ru')">Русский</button>
+    <button onclick="switchLang('tr')">Türkçe</button>
+  </div>
+
+  <div class="lang en">
+    <p>Welcome to the gallery of Lucretia.</p>
+  </div>
+  <div class="lang ru" style="display:none;">
+    <p>Добро пожаловать в галерею Lucretia.</p>
+  </div>
+  <div class="lang tr" style="display:none;">
+    <p>Lucretia'nın galerisine hoş geldiniz.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="img1.jpg" alt="Image 1"/>
+<img src="img2.jpg" alt="Image 2"/>
+<img src="img3.jpg" alt="Image 3"/>
+<img src="img4.jpg" alt="Image 4"/>
+<img src="img5.jpg" alt="Image 5"/>
+<img src="img6.jpg" alt="Image 6"/>
+<img src="img7.jpg" alt="Image 7"/>
+<img src="img8.jpg" alt="Image 8"/>
+<img src="img9.jpg" alt="Image 9"/>
+<img src="img10.jpg" alt="Image 10"/>
+  </div>
+</body>
+</html>
