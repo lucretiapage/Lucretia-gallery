@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Lucretia Gallery</title>
+  
+<div style="text-align:center; margin-top:10px;">
+  <button onclick="changeLang('en')">🇬🇧</button>
+  <button onclick="changeLang('tr')">🇹🇷</button>
+  <button onclick="changeLang('ru')">🇷🇺</button>
+</div>
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
@@ -338,5 +344,10 @@
     e.preventDefault();
   });
 </script>
-  
+ <script>
+  function changeLang(lang) {
+    document.querySelectorAll('.lang-block').forEach(el => el.style.display = 'none');
+    document.getElementById(lang).style.display = 'block';
+  }
+</script> 
 </html>
