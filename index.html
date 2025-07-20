@@ -106,11 +106,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  }
+  
 </style>
 <h1>Lucrecia Gallery</h1>
 <div class="swiper">
   <div class="swiper-wrapper">
+    <style>
+
+
+@media (max-width: 768px) {
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+    flex-shrink: 0;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 24px;
+    color: gold;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+  }
+}
+</style>
+
     <div class="swiper-slide"><img src="gallery2025/1.jpg" alt="1"></div>
     <div class="swiper-slide"><img src="gallery2025/2.jpg" alt="2"></div>
     <div class="swiper-slide"><img src="gallery2025/3.jpg" alt="3"></div>
