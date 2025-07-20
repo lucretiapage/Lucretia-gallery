@@ -5,7 +5,7 @@
   <title>Lucretia Gallery</title>
 
  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
  <style>
      <style>
     .swiper-slide img {
@@ -137,34 +137,78 @@
 <div class="swiper">
   <div class="swiper-wrapper">
 </style>
-<div class="swiper-slide"><img src="gallery2025/1.jpg" alt="1"></div>
-    <div class="swiper-slide"><img src="gallery2025/2.jpg" alt="2"></div>
-    <div class="swiper-slide"><img src="gallery2025/3.jpg" alt="3"></div>
-    <div class="swiper-slide"><img src="gallery2025/4.jpg" alt="4"></div>
-    <div class="swiper-slide"><img src="gallery2025/5.jpg" alt="5"></div>
-    <div class="swiper-slide"><img src="gallery2025/6.jpg" alt="6"></div>
-    <div class="swiper-slide"><img src="gallery2025/7.jpg" alt="7"></div>
-    <div class="swiper-slide"><img src="gallery2025/8.jpg" alt="8"></div>
-    <div class="swiper-slide"><img src="gallery2025/9.jpg" alt="9"></div>
-    <div class="swiper-slide"><img src="gallery2025/10.jpg" alt="10"></div>
-    <div class="swiper-slide"><img src="gallery2025/11.jpg" alt="11"></div>
-    <div class="swiper-slide"><img src="gallery2025/12.jpg" alt="12"></div>
-    <div class="swiper-slide"><img src="gallery2025/13.jpg" alt="13"></div>
-    <div class="swiper-slide"><img src="gallery2025/14.jpg" alt="14"></div>
-    <div class="swiper-slide"><img src="gallery2025/15.jpg" alt="15"></div>
-    <div class="swiper-slide"><img src="gallery2025/16.jpg" alt="16"></div>
-    <div class="swiper-slide"><img src="gallery2025/17.jpg" alt="17"></div>
-    <div class="swiper-slide"><img src="gallery2025/18.jpg" alt="18"></div>
-    <div class="swiper-slide"><img src="gallery2025/19.jpg" alt="19"></div>
-    <div class="swiper-slide"><img src="gallery2025/20.jpg" alt="20"></div>
-    <div class="swiper-slide"><img src="gallery2025/21.jpg" alt="21"></div>
-    <div class="swiper-slide"><img src="gallery2025/22.jpg" alt="22"></div>
-    <div class="swiper-slide"><img src="gallery2025/23.jpg" alt="23"></div>
-    <div class="swiper-slide"><img src="gallery2025/24.jpg" alt="24"></div>
-    <div class="swiper-slide"><img src="gallery2025/25.jpg" alt="25"></div>
-    <div class="swiper-slide"><img src="gallery2025/26.jpg" alt="26"></div>
-    <div class="swiper-slide"><img src="gallery2025/27.jpg" alt="27"></div>
-    <div class="swiper-slide"><img src="gallery2025/28.jpg" alt="28"></div>
+<script src="https://unpkg.com/photoswipe@5/dist/photoswipe.min.js"></script>
+<script>
+  const items = [
+    // 👇 сюда вставим 28 фото
+    { src: 'gallery2025/1.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/2.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/3.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/4.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/5.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/6.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/7.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/8.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/9.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/10.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/11.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/12.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/13.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/14.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/15.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/16.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/17.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/18.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/19.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/20.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/21.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/22.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/23.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/24.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/25.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/26.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/27.jpg', w: 1600, h: 1067 },
+    { src: 'gallery2025/28.jpg', w: 1600, h: 1067 },
+  ];
+
+  const gallery = new PhotoSwipe.Lightbox({
+    gallery: '#photo-grid',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js'),
+    dataSource: items
+  });
+  gallery.init();
+</script>
+<div id="photo-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <a href="#"><img src="gallery2025/1.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/2.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/3.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/4.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/5.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/6.jpg" width="100" style="object-fit: cover;"></a> 
+  <a href="#"><img src="gallery2025/7.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/8.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/9.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/10.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/11.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/12.jpg" width="100" style="object-fit: cover;"></a> 
+  <a href="#"><img src="gallery2025/13.jpg" width="100" style="object-fit: cover;"></a>
+   <a href="#"><img src="gallery2025/14.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/15.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/16.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/17.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/18.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/19.jpg" width="100" style="object-fit: cover;"></a> 
+  <a href="#"><img src="gallery2025/20.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/21.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/22.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/23.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/24.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/25.jpg" width="100" style="object-fit: cover;"></a> 
+  <a href="#"><img src="gallery2025/26.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/27.jpg" width="100" style="object-fit: cover;"></a>
+  <a href="#"><img src="gallery2025/28.jpg" width="100" style="object-fit: cover;"></a>
+</div>
 
   </div>
 </div>
