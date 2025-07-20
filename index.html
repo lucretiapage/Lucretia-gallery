@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Lucretia Gallery</title>
 
- 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
+
 <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
  <style>
     
@@ -139,7 +141,6 @@
 <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.min.js"></script>
 <script>
   const items = [
-    // 👇 сюда вставим 28 фото
     { src: 'gallery2025/1.jpg', w: 1600, h: 1067 },
     { src: 'gallery2025/2.jpg', w: 1600, h: 1067 },
     { src: 'gallery2025/3.jpg', w: 1600, h: 1067 },
@@ -178,6 +179,56 @@
   });
   gallery.init();
 </script>
+   <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery-grid img');
+  const images = Array.from(galleryImages).map(img => img.src);
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      const instance = basicLightbox.create(`
+        <div class="lightbox-container">
+          <img src="${images[index]}" id="lightbox-img" style="max-height:90vh; max-width:90vw;" />
+          <div class="nav left" onclick="navigate(-1)">‹</div>
+          <div class="nav right" onclick="navigate(1)">›</div>
+        </div>
+      `, {
+        onShow: (instance) => {
+          const container = instance.element();
+          let current = index;
+          window.navigate = function(dir) {
+            current = (current + dir + images.length) % images.length;
+            container.querySelector('#lightbox-img').src = images[current];
+          };
+        }
+      });
+      instance.show();
+    });
+  });
+</script>
+
+<style>
+  .lightbox-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+  }
+  .lightbox-container .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: white;
+    padding: 0 15px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .lightbox-container .left { left: 10px; }
+  .lightbox-container .right { right: 10px; }
+</style> 
 <div id="photo-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
   <a href="#"><img src="gallery2025/1.jpg" width="100" style="object-fit: cover;"></a>
   <a href="#"><img src="gallery2025/2.jpg" width="100" style="object-fit: cover;"></a>
