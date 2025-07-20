@@ -403,23 +403,20 @@
   });
 </script>
 
-     <script>
+ <script>
   function changeLang(lang) {
-    // Скрываем все блоки с языками
-    document.querySelectorAll('.lang-block').forEach(el => {
-      el.style.display = 'none';
+    const languages = ['en', 'ru', 'tr'];
+    languages.forEach(function(l) {
+      const block = document.getElementById(l);
+      if (block) {
+        block.style.display = (l === lang) ? 'block' : 'none';
+      }
     });
-
-    // Показываем только выбранный
-    const selected = document.getElementById(lang);
-    if (selected) {
-      selected.style.display = 'block';
-    }
   }
 
-  // При загрузке — по умолчанию включаем английский (или ru, если хочешь)
-  window.onload = function () {
-    changeLang('en'); 
+  // Автоотображение английского по умолчанию
+  window.onload = function() {
+    changeLang('en');
   };
-</script> 
+</script>   
 </html>
