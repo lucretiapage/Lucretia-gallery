@@ -17,6 +17,21 @@
   </style>
     }
   </style>
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; 
+  padding: 20px 0;
+}
+
+.gallery-grid img {
+  max-width: 100%;
+  height: auto;
+  width: 100px; 
+  border-radius: 10px;
+  cursor: pointer;
+}
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -213,18 +228,3 @@ new Swiper('.swiper', {
 </div>
 
 </html>
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; 
-  padding: 20px 0;
-}
-
-.gallery-grid img {
-  max-width: 100%;
-  height: auto;
-  width: 100px; 
-  border-radius: 10px;
-  cursor: pointer;
-}
