@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <title>Lucretia Gallery</title>
 
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
 
-<link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+
  <style>
   
 
@@ -55,27 +55,7 @@
   }
     }
 
-    .swiper {
-      width: 100%;
-      max-width: 800px;
-      margin: 40px auto;
-      border: 2px solid gold;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: gold;
-      text-shadow: 0 0 5px black;
-    }
+ 
   </style>
 </head>
 <body>
@@ -117,13 +97,7 @@
 <h1>Lucretia Gallery</h1>
 
 
-  const gallery = new PhotoSwipe.Lightbox({
-    gallery: '#photo-grid',
-    children: 'a',
-    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js'),
-    dataSource: items
-  });
-  gallery.init();
+
 </script>
    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
 
@@ -211,27 +185,6 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
 
-new Swiper('.swiper', {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,  
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
 
 </script>
     </div>
