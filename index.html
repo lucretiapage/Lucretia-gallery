@@ -272,4 +272,92 @@
   </table>
 </div>
 
+  <style>
+  .table-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .pricing-table {
+    width: 90%;
+    max-width: 500px;
+    border-collapse: collapse;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  }
+
+  .pricing-table th {
+    background-color: gold;
+    color: #000;
+    text-align: left;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .pricing-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #444;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .pricing-table th, .pricing-table td {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  }
+</style>
+
+<div class="table-wrapper">
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>€Present</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1 hour</td><td>250€</td></tr>
+      <tr><td>1,5 hours</td><td>340€</td></tr>
+      <tr><td>2 hours</td><td>400€</td></tr>
+      <tr><td>3 hours</td><td>550€</td></tr>
+      <tr><td>4 hours</td><td>650€</td></tr>
+      <tr><td>6 hours</td><td>800€</td></tr>
+      <tr><td>9 hours</td><td>1000€</td></tr>
+      <tr><td>12 hours</td><td>1200€</td></tr>
+      <tr><td>24 hours</td><td>2000€</td></tr>
+      <tr><td>48 hours</td><td>3500€</td></tr>
+      <tr><td>Another 24h</td><td>1000€</td></tr>
+    </tbody>
+  </table>
+</div>
+
+  <style>
+  img {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<script>
+  // Запретить правый клик
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // Запретить перетаскивание
+  document.addEventListener('dragstart', function (e) {
+    e.preventDefault();
+  });
+</script>
+  
 </html>
