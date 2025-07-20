@@ -373,10 +373,24 @@
     e.preventDefault();
   });
 </script>
- <script>
+
+     <script>
   function changeLang(lang) {
-    document.querySelectorAll('.lang-block').forEach(el => el.style.display = 'none');
-    document.getElementById(lang).style.display = 'block';
+    // Скрываем все блоки с языками
+    document.querySelectorAll('.lang-block').forEach(el => {
+      el.style.display = 'none';
+    });
+
+    // Показываем только выбранный
+    const selected = document.getElementById(lang);
+    if (selected) {
+      selected.style.display = 'block';
+    }
   }
+
+  // При загрузке — по умолчанию включаем английский (или ru, если хочешь)
+  window.onload = function () {
+    changeLang('gb'); // или 'ru', или 'tr'
+  };
 </script> 
 </html>
