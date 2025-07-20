@@ -1,70 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lucretia Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .description {
-            background: white;
-            padding: 15px 25px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Lucretia Gallery</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      color: gold;
+      font-family: 'Cinzel Decorative', cursive;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px gold;
+    }
+
+    .description {
+      background: rgba(255, 215, 0, 0.05);
+      border: 1px solid gold;
+      border-radius: 12px;
+      padding: 20px 30px;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      font-size: 18px;
+      line-height: 1.8;
+      font-style: italic;
+      color: #fff;
+    }
+
+    .description strong {
+      color: gold;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 800px;
+      margin: 40px auto;
+      border: 2px solid gold;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: gold;
+      text-shadow: 0 0 5px black;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to Lucretia Gallery</h1>
-    <div class="description">
-        <p><strong>Hello gentleman!</strong><br>
-        My name Luca!<br>
-        All information is actual! READ PLEASE<br><br>
-        ~ Only OUTCALL (your place - high quality, an apartment hotels 5*)<br>
-        ~ Taxi price is not including<br><br>
-        I am independent! That isn't my job! It's my lovely hobby. I don't seat nearby my phone every minute, can answer you later as I see a message.<br><br>
-        Please introduce yourself (age, from) in a first message and write your wishes about the meeting: where, when and for how long.<br><br>
-        <strong>I DON'T SEND PHOTO OR VIDEO!</strong><br>
-        My photos all real and recently — 10000000%<br>
-        Not need ask!!!<br>
-        And spend my and your time!<br><br>
-        I'm a discreet, educated, tender, but passionate and sensual lady. I love to seduce, be seduced and I know how to please. If you're looking for an elite courtesan, not just an escort, then I'm your girl. Not only will I leave you with a smile on your face, but definitely leave you wanting more.<br><br>
-        <strong>Important points to note before you contact me:</strong><br>
-        - I will not entertain anyone under any influence of alcohol or drugs.<br>
-        - If you require x without a condom, look elsewhere.<br>
-        - Advanced booking are greatly appreciated and highly recommended!<br>
-        - Your donation for our arrangement should be left in clear view at the beginning of our meeting. Never make me ask for it.<br>
-        - To fully enjoy and maximise our meeting, you must be freshly showered, well-groomed, smell nice and have minty-fresh breath.<br>
-        - Please be respectful and always act in a gentlemanly manner. Your kindness, generosity and chivalry will be appreciated and rewarded.
-        </p>
-    </div>
+
+  <h1>Lucretia Gallery</h1>
+
+  <div class="description">
+    <p><strong>Hello gentleman!</strong><br>
+    My name Luca!<br>
+    All information is actual! READ PLEASE<br><br>
+    ~ Only OUTCALL (your place - high quality, an apartment hotels 5*)<br>
+    ~ Taxi price is not including<br><br>
+    I am independent! That isn't my job! It's my lovely hobby. I don't seat nearby my phone every minute, can answer you later as I see a message.<br><br>
+    Please introduce yourself (age, from) in a first message and write your wishes about the meeting: where, when and for how long.<br><br>
+    <strong>I DON'T SEND PHOTO OR VIDEO!</strong><br>
+    My photos all real and recently — 10000000%<br>
+    Not need ask!!!<br>
+    And spend my and your time!<br><br>
+    I'm a discreet, educated, tender, but passionate and sensual lady. I love to seduce, be seduced and I know how to please. If you're looking for an elite courtesan, not just an escort, then I'm your girl. Not only will I leave you with a smile on your face, but definitely leave you wanting more.<br><br>
+    <strong>Important points to note before you contact me:</strong><br>
+    - I will not entertain anyone under any influence of alcohol or drugs.<br>
+    - If you require x without a condom, look elsewhere.<br>
+    - Advanced booking are greatly appreciated and highly recommended!<br>
+    - Your donation for our arrangement should be left in clear view at the beginning of our meeting. Never make me ask for it.<br>
+    - To fully enjoy and maximise our meeting, you must be freshly showered, well-groomed, smell nice and have minty-fresh breath.<br>
+    - Please be respectful and always act in a gentlemanly manner. Your kindness, generosity and chivalry will be appreciated and rewarded.
+    </p>
+  </div>
+
     <div class="gallery">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
